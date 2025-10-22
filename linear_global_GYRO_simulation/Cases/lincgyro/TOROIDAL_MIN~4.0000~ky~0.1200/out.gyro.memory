@@ -1,0 +1,121 @@
+ gyro_alloc_distrib:
+
+    3.670 MB   omega_d1
+    3.670 MB   omega_dr
+    3.670 MB   omega_star
+    0.524 MB   v_theta
+    0.524 MB   v_theta
+    3.670 MB   v_para
+    0.001 MB   nek_n
+    0.001 MB   nek_e
+    0.001 MB   nek_k
+    0.008 MB   ine_i
+    0.008 MB   ine_n
+    0.008 MB   ine_e
+    7.864 MB   cs_blend
+   14.680 MB   c_blend
+    7.864 MB   cs_blend_prime
+   14.680 MB   o_f
+   14.680 MB   o_fv
+   51.380 MB   o_advect
+    1.049 MB   imp
+  205.521 MB   d_rbf
+    0.264 MB   z_gyro
+  181.666 MB   w_gyro0
+  181.666 MB   w_gyro2
+  181.666 MB   w_gyro1
+  181.666 MB   w_gyro3
+
+ gyro_alloc_big:
+
+    0.049 MB   field_blend
+    0.049 MB   field_blend_old
+    0.049 MB   field_blend_dot
+    0.001 MB   phi_squared
+    0.003 MB   field_fluxave
+    7.340 MB   h_err
+    7.340 MB   h_0
+    7.340 MB   h_old
+    7.340 MB   h
+    7.340 MB   h_cap
+    0.000 MB   h_source
+    7.340 MB   rhs
+    7.340 MB   rhs_dr
+    7.340 MB   rhs_dt
+    1.835 MB   f_coll
+    1.835 MB   fb_coll
+    1.835 MB   h_c
+    7.340 MB   h_tran
+    7.340 MB   gyro_h
+    7.340 MB   gyro_h_aperp
+    5.505 MB   field_tau
+   22.020 MB   gyro_uv
+   22.020 MB   gyro_uv_old2
+   22.020 MB   gyro_uv_old
+   22.020 MB   gyro_uv_dot
+    7.340 MB   gyro_u
+    7.340 MB   gyro_u_tran
+    0.098 MB   phi
+    0.016 MB   vel_sum_p
+    0.016 MB   vel_sum_a
+    0.016 MB   vel_sum_aperp
+    0.197 MB   phi_plot
+    0.590 MB   moments_plot
+    0.025 MB   moments_zero_plot
+    0.001 MB   kxkyspec
+    0.049 MB   nonlinear_flux
+    0.049 MB   gbflux_i
+    0.000 MB   gbflux
+    0.000 MB   gbflux_n
+    0.000 MB   time_error
+    0.000 MB   entropy
+    0.066 MB   h0_eq
+
+ gyro_alloc_orbit:
+
+    0.229 MB   theta_t
+    0.229 MB   tau
+    0.001 MB   m_cyc
+    0.688 MB   p_cyc
+    0.000 MB   m_phys
+    0.000 MB   p_phys
+    0.008 MB   omega
+    0.000 MB   m_map
+    0.000 MB   theta_int
+    0.000 MB   theta_plot
+    0.229 MB   b0_t
+    0.229 MB   g_theta_t
+    0.229 MB   grad_r_t
+    0.229 MB   qrat_t
+    0.229 MB   cos_t
+    0.229 MB   cos_p_t
+    0.229 MB   captheta_t
+    0.229 MB   sin_t
+    0.229 MB   bt_t
+    0.229 MB   bp_t
+    0.229 MB   bigr_t
+    0.025 MB   b0_plot
+    0.025 MB   g_theta_plot
+    0.008 MB   c_fluxav
+    0.262 MB   ff_mm
+    0.008 MB   ff_mm_piv
+    0.524 MB   ff2_mm
+    0.008 MB   ff2_mm_piv
+    0.393 MB   blend_plo
+    0.393 MB   blend_prime_plot
+    0.066 MB   nu_total
+    0.229 MB   xi
+    0.131 MB   coll_vel
+    0.131 MB   coll_vel_perp1
+    0.131 MB   coll_vel_perp2
+
+ Sparse field arrays (no alloc block):
+
+    1.948 MB   m_ampere
+    0.657 MB   indx_ampere
+   52.083 MB   m_maxwell
+   17.385 MB   indx_maxwell
+   48.562 MB   m_poissonaperp
+   16.204 MB   indx_poissonaperp
+ ---------------------
+ 1399.042 MB

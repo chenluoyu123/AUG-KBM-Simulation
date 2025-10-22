@@ -1,0 +1,13 @@
+To be a valid OMFIT module, only the following entries must be present:
+* root['SETTINGS']['MODULE']['ID']            : module identifier (set when a new module is created)
+* root['SETTINGS']['MODULE']['edited_by']     : person who last edited this module (automatically set by OMFIT)
+* root['SETTINGS']['MODULE']['date']          : date of last edit (automatically set by OMFIT)
+* root['SETTINGS']['MODULE']['version']       : description of the module (can be also edited by OMFIT GUI)
+* root['SETTINGS']['DEPENDENCIES']            : string variables under this subtree define links to the OMFIT tree
+                                                that will be available in the scripts/expressions
+
+The initial structure of this moudule is meant to be mainly an organizational suggestion,
+and you can delete and add the subtrees that are needed to best accomplish your specific task.
+The root['IPS'] subtree is meant to contain information relative to the execution of this module through IPS, if applicable.
+
+You can clear the content of this `help` file and use it to write the documentation relative to this module.

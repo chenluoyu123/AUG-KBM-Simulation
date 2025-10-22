@@ -1,0 +1,21 @@
+# some commonly used variables
+pltnl=root['SETTINGS']['PLOTS']['nl']
+t_ave=pltnl['t_ave']  # average over [1-t_ave,1]*time_tot
+case_plot=pltnl['case_plot']
+n_case=len(case_plot)
+channel=pltnl['channel']  # which channel to be compared, including  Q_*, Gamma_*,Pi_*, multiple value is available
+n_channel=len(channel)
+outputs=root['OUTPUTS']
+freq_lin=pltnl['freq_lin']
+tick_scale={0:'linear',1:'log'}
+effnum=root['SETTINGS']['SETUP']['effnum']
+fs1=24
+fs2=20
+fs3=16
+lw=2
+lab=['-b','-r','-k','-g','-m','-c','-y','-b','-r','-k']
+labd=['--b','--r','--k','--g','--m','--c','--y','--b','--r','--k']
+labo=['-bo','-ro','-ko','-go','-mo','-co','-yo','-bo','-ro','-ko']
+ion_name={1:'D',-1:'e',6:'C',18:'Ar',10:'Ne'}
+field_name={0:'phi',1:'A_{||}',2:'B_{||}'}
+moment_name={0:'n',1:'p',2:'v'}

@@ -1,0 +1,1 @@
+    OMFIT.saveas('/scratch/xiangjian/OMFITdata/project/gyro/initialvalue/AUG_cgyro_rho0.35_toroidalminscan_2ion_extend_highresolution.zip')

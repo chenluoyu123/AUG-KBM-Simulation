@@ -1,1 +1,0 @@
-OMFIT['WholeInfo']['INPUTS']['rawdata.txt']=OMFITnamelist('/fusion/projects/xpsi/east-d3d_experiments/Jian/collegues/matthias/nsh-kefit-xj/deployfromefit/RAW_DATA.txt')

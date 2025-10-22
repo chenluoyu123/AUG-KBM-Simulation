@@ -1,5 +1,0 @@
-OMFIT['SCRIPTS']['update.py']=OMFITpythonTask('/home/users/xiangjian/mymodule/WholeInfo/SCRIPTS/update.py')
-OMFIT['SCRIPTS']['update.py'].run()
-OMFIT['PLOTS']['profile.py'].run()
-OMFIT['PLOTS']['normpara.py'].run()
-OMFIT['PLOTS']['fastion.py'].run()

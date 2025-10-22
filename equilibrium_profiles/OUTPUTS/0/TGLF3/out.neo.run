@@ -1,0 +1,64 @@
+ CONTROL PARAMETERS
+ ------------------
+ sim_model                     : NUMERICAL (with theory)
+ ae_flag                       : KINETIC ELECTRONS
+ collision_model               : FULL LINEARIZED FOKKER-PLANCK
+ equilibrium_model             : MILLER
+ profile_model                 : LOCAL
+ sign_q                        : NEGATIVE
+ sign_bunit                    : POSITIVE (BT CW)
+ rotation model                : ROTATION EFFECTS INCLUDED
+ spitzer_model:                : OFF (NEOCLASSICAL TRANSPORT)
+ threed_model:                 : AXISYMMETRIC EQUILIBRIUM
+
+ GRID DIMENSIONS
+ ---------------
+ n_radial         :   1
+ n_energy         :   5
+ n_xi             :  11
+ n_theta          :  11
+
+ PHYSICS PARAMETERS
+ ------------------
+       r/a:  3.4078E-01
+       R/a:  3.6419E+00        shift: -1.0535E-01
+         q: -1.3306E+00            s:  3.7224E-01
+      zmag:  1.3852E-01        dzmag: -2.6872E-02
+     kappa:  1.3483E+00      s_kappa:  2.1404E-02
+     delta:  2.3965E-02      s_delta:  3.1002E-02
+      zeta: -2.1725E-03       s_zeta: -7.4256E-03
+      sin3: -2.1480E-04       s_sin3: -7.8068E-04
+      sin4:  0.0000E+00       s_sin4:  0.0000E+00
+      sin5:  0.0000E+00       s_sin5:  0.0000E+00
+      sin6:  0.0000E+00       s_sin6:  0.0000E+00
+      cos0: -5.5839E-02       s_cos0: -5.0192E-03
+      cos1: -9.2060E-03       s_cos1: -1.1248E-02
+      cos2:  8.8079E-04       s_cos2:  2.8328E-03
+      cos3:  1.3132E-04       s_cos3:  2.4039E-04
+      cos4:  0.0000E+00       s_cos4:  0.0000E+00
+      cos5:  0.0000E+00       s_cos5:  0.0000E+00
+      cos6:  0.0000E+00       s_cos6:  0.0000E+00
+
+  dphi0/dr:  0.0000E+00
+     omega: -1.1006E-01    domega/dr:  2.2182E-01
+     epar0:  0.0000E+00
+
+indx   z       n/n_norm     T/T_norm     m/m_norm     a/Ln         a/Lt         nu
+  1   -1.000   1.0000E+00   9.0325E-01   2.7244E-04   1.3304E+00   1.6355E+00   1.4803E-02
+  2    1.000   1.0000E+00   1.0000E+00   1.0000E+00   1.4333E+00   3.2491E+00   2.0974E-04
+ ------------------
+
+ Estimated memory (GB) =  0.94238E-01
+ Begin matrix factor -- UMFPACK
+ Done matrix factor -- UMFPACK
+ Begin matrix solve -- UMFPACK
+ Done matrix solve -- UMFPACK
+
+ r/a =                 0.34078E+00
+ jpar =               -0.14433E-01
+ sum Z_s Gamma_s =     0.17271E-09
+  Z       pflux         eflux         mflux
+ -1.000   0.53686E-09   0.99849E-09   0.10264E-11
+  1.000   0.70958E-09   0.30918E-07   0.86044E-08
+ ------------------
+

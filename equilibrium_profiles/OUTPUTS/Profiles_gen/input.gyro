@@ -1,0 +1,103 @@
+#===============================================
+# Rotation-specific parameters
+#
+GAMMA_E=0.0
+GAMMA_P=0.0
+MACH=0.0
+#==============================================
+
+#==============================================
+# Plasma shape/geometry
+#
+RADIAL_PROFILE_METHOD=5
+
+RADIUS=0.227911
+SAFETY_FACTOR=1.22037
+SHEAR=0.0744037
+ASPECT_RATIO=3.65131
+
+# Model eq. parameters
+SHIFT=-0.0632674
+KAPPA=1.34404
+S_KAPPA=-0.00140123
+DELTA=0.0150066
+S_DELTA=0.0158711
+ZETA=-0.000469058
+S_ZETA=-0.00214722
+ZMAG=0.140818
+DZMAG=-0.0148684
+#==============================================
+
+#==============================================
+# Plasma profiles
+#
+ELECTRON_METHOD=1
+
+# deuterium
+MU=1.0
+DLNNDR=0.799454
+DLNTDR=2.47116
+
+# electron
+MU_ELECTRON=60.0
+DLNNDR_ELECTRON=1.0
+DLNTDR_ELECTRON=3.0
+#==============================================
+
+#==============================================
+# Numerical resolution
+
+TOROIDAL_GRID=1
+BOX_MULTIPLIER=-1.0
+L_Y=0.3
+
+TIME_STEP=0.1
+TIME_MAX=-100.001
+TIME_SKIP=10
+
+# radial resolution
+
+RADIAL_GRID=6
+RADIAL_DERIVATIVE_BAND=2
+RADIAL_GYRO_BAND=3
+
+# poloidal resolution
+
+ORBIT_GRID=6
+BLEND_GRID=6
+
+# velocity resolution
+
+PASS_GRID=4
+TRAP_GRID=4
+ENERGY_GRID=8
+ENERGY_MAX=6.0
+#==============================================
+
+#==============================================
+# Control parameters
+#
+BOUNDARY_METHOD=1
+
+AMP_PHI_N=0.0001
+AMP_PHI_0=0.0
+
+THETA_PLOT=24
+
+PLOT_U_FLAG=1
+PLOT_N_FLAG=0
+PLOT_E_FLAG=0
+PLOT_V_FLAG=0
+
+LINDIFF_METHOD=3
+#==============================================
+
+BTCCW=-1.0
+IPCCW=1.0
+N_FIELD=2
+BETAE_UNIT=0.0132667
+NU_EI=0.0131896
+Z=1
+NI_OVER_NE=0.87344
+TI_OVER_TE=1.34814
+Z_2=0

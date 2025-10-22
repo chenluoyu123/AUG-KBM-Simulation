@@ -1,0 +1,1 @@
+print(OMFIT['scriptsRun']['cs']/OMFIT['scriptsRun']['VA'])

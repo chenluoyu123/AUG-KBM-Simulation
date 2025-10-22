@@ -1,0 +1,38 @@
+ &PHYSICS
+ iGenEr = 0
+ /
+ &PLOTS
+ ipltITG_crit = 0
+ ipltETG_crit = 0
+ /
+ &SETUP
+ workDir =
+ executable =
+ pbs_queue = 'parallel01'
+ num_nodes = 1
+ num_cores = 13
+ p_tgyro = 13
+ wall_time = '00:30:00'
+ /
+ &EXPERIMENT
+ shot =
+ time =
+ device =
+ shots =
+ times =
+ runid =
+ /
+ &REMOTE_SETUP
+ serverPicker = ''
+ workDir = '/scratch/xiangjian/OMFIT/runs/WholeInfo/0'
+ server = 'xiangjian@login112'
+ tunnel = ''
+ /
+ &MODULE
+ ID = 'WholeInfo'
+ edited_by =
+ date =
+ contact = 'xjian@ipp.ac.cn'
+ /
+ &DEPENDENCIES
+ /

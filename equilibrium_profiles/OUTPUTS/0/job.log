@@ -1,0 +1,66 @@
+=== Sir/Madam, I AM SHENMA. 
+=== Its my honor to server you !!
+--------------------------------------------------
+Begin Prologue Fri May 17 20:57:50 CST 2024
+Job ID: 955448.service103
+It is PBS.
+Time is 2024年 05月 17日 星期五 20:57:50 CST
+Directory is /gpfs-home/users/xiangjian
+The master node of this job is shenma035
+The working directory is /gpfs/scratch/xiangjian/OMFIT/runs/WholeInfo/0
+The node file is /var/spool/torque/aux//955448.service103
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+This job runs on the following nodes:
+shenma035 shenma035 shenma035 shenma035 shenma035 shenma035 shenma035 shenma035 shenma035 shenma035 shenma035 shenma035 shenma035
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+This job has allocated 13 nodes
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+/gpfs/scratch/xiangjian/OMFIT/runs/WholeInfo/0
+Run: tgyro -e . -n 13 
+==========================================================
+TGYRO a112f8c [2024-03-07] SHENMA Linux x86_64
+==========================================================
+WARNING: (gacodeinput.py) Ignoring parameter LOC_MA2
+WARNING: (gacodeinput.py) Ignoring parameter LOC_MA3
+WARNING: (gacodeinput.py) Ignoring parameter LOC_MA1
+WARNING: (gacodeinput.py) Ignoring parameter LOC_Z
+WARNING: (gacodeinput.py) Ignoring parameter LOC_Z3
+WARNING: (gacodeinput.py) Ignoring parameter LOC_Z2
+INFO: (gacodeinput) Number of code instances: 13
+INFO: (gacodeinput.py) Found tglf input in TGLF1
+INFO: (gacodeinput.py) Found tglf input in TGLF2
+INFO: (gacodeinput.py) Found tglf input in TGLF3
+INFO: (gacodeinput.py) Found tglf input in TGLF4
+INFO: (gacodeinput.py) Found tglf input in TGLF5
+INFO: (gacodeinput.py) Found tglf input in TGLF6
+INFO: (gacodeinput.py) Found tglf input in TGLF7
+INFO: (gacodeinput.py) Found tglf input in TGLF8
+INFO: (gacodeinput.py) Found tglf input in TGLF9
+INFO: (gacodeinput.py) Found tglf input in TGLF10
+INFO: (gacodeinput.py) Found tglf input in TGLF11
+INFO: (gacodeinput.py) Found tglf input in TGLF12
+INFO: (gacodeinput.py) Found tglf input in TGLF13
+INFO: (gacodeinput) Required MPI tasks in TGYRO: 13
+INFO: (tgyro script) See out.tgyro.run for TGYRO run summary.
+mpiexec -x OMP_NUM_THREADS=1 -n 13 /home/users/xiangjian/mygit/gacode_2021/tgyro/src/tgyro_main
+INFO: (TGYRO) Finished iteration 0 [ 7.970E+00]
+
+--------------------------------------------------
+Begin Epilogue: 
+Job ID: 955448.service103
+User ID: xiangjian
+Group ID: visitor
+Job Name: tgyro
+Session ID: 12894
+Resource List: neednodes=1:ppn=13,nodes=1:ppn=13,walltime=00:30:00
+Resources Used: cput=00:02:02,energy_used=0,mem=0kb,vmem=0kb,walltime=00:00:12
+Queue Name: parallel01
+Account String: 
+End Epilogue: Fri May 17 20:58:02 CST 2024
+--------------------------------------------------
+
+=== JOB DONE!  YEAH!      
+=== I AM THE KING LORD OF HORSE!   
+=== Bye! Don't forget to tip!!  
+

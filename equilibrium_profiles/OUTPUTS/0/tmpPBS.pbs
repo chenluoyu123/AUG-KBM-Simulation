@@ -1,0 +1,60 @@
+#!/bin/bash
+#PBS -N tgyro
+#PBS -o job.log
+#PBS -e job.err
+#PBS -l nodes=1:ppn=1
+#PBS -j oe
+#PBS -l walltime=24:00:00
+#PBS -q medium
+
+if [ ! -z ${PBS_NODEFILE} ]; then
+  echo 'It is PBS.'
+else
+  if [ ! -z ${SLURM_JOB_NODELIST} ]; then
+    echo 'It is SLURM.'
+    cat ${SLURM_JOB_NODELIST[@]} > ./pbs_nodefile
+    PBS_NODEFILE='./pbs_nodefile'
+    PBS_O_WORKDIR=${SLURM_SUBMIT_DIR}
+  fi
+fi
+
+export NPROCS=`wc -l ${PBS_NODEFILE} |gawk '//{print $1}'`
+
+echo Time is `date`
+echo Directory is $PWD
+echo The master node of this job is `hostname`
+echo The working directory is `echo ${PBS_O_WORKDIR}`
+echo The node file is ${PBS_NODEFILE}
+echo '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'
+echo This job runs on the following nodes:
+echo `cat ${PBS_NODEFILE}`
+echo ${SLURM_JOB_NODELIST[@]}
+echo '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'
+echo This job has allocated ${NPROCS} nodes
+
+
+echo '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'
+
+if [ ! -z ${PBS_O_WORKDIR} ]; then
+  cd ${PBS_O_WORKDIR}
+else
+  if [ ! -z ${SLURM_SUBMIT_DIR} ]; then
+    cd ${SLURM_SUBMIT_DIR}
+  fi
+fi
+pwd
+NP=`cat ${PBS_NODEFILE}|wc -l`
+
+export PBS_O_WORKDIR
+export PBS_NODEFILE
+export PBS_QUEUE
+
+JOBID_FILE="JOBID_${PBS_JOBID}"
+touch ${JOBID_FILE}
+
+cmd="tgyro -e . -n 13"
+echo "Run: ${cmd}"
+${cmd}
+
+rm ${JOBID_FILE}
+

@@ -1,0 +1,103 @@
+ -----------------------------------------------------------------
+ TGYRO simdir : /gpfs/scratch/xiangjian/OMFIT/runs/WholeInfo/0
+ INFO: (tgyro script) Passing control to TGYRO executable
+ -----------------------------------------------------------------
+ CPU Partition list
+
+ ----------   ----------------  --------
+  Instance     Directory Name     CPUs  
+ ----------   ----------------  --------
+   1              TGLF1/           1
+   2              TGLF2/           1
+   3              TGLF3/           1
+   4              TGLF4/           1
+   5              TGLF5/           1
+   6              TGLF6/           1
+   7              TGLF7/           1
+   8              TGLF8/           1
+   9              TGLF9/           1
+  10              TGLF10/          1
+  11              TGLF11/          1
+  12              TGLF12/          1
+  13              TGLF13/          1
+ ----------   ----------------  --------
+                     Total:       13
+
+ INFO: (tgyro_comm_setup) Starting mpi_gathers
+ INFO: (tgyro_comm_setup) Done mpi_gather color
+ INFO: (tgyro_comm_setup) Done mpi_gather worker
+ INFO: (tgyro_comm_setup) Done mpi_gather adjoint
+ INFO: (tgyro_comm_setup) Done mpi_gather worker adjoint
+ INFO: (tgyro_comm_setup) Starting mpi_comm_split gyro_comm
+ INFO: (tgyro_comm_setup) Starting mpi_comm_split gyro_adj
+ INFO: (tgyro_comm_setup) Starting mpi_comm_split gyro_rad
+ INFO: (tgyro_comm_setup) Starting mpi_comm_rank
+ INFO: (tgyro_comm_setup) Finished MPI setup
+ Job control
+
+ LOC_RESTART_FLAG               : New simulation
+
+ Iteration control
+
+ TGYRO_ITERATION_METHOD         : Local Residual Minimization (original scheme)
+ LOC_RESIDUAL_METHOD            : (f-g)^2
+ LOC_DX (Jacobian dx)           :   0.0300
+ LOC_DX_MAX (maximum dx)        :   0.5000
+ LOC_RELAX (conv. relaxation)   :   2.0000
+ TGYRO_CONSISTENT_FLAG          : Finite-difference gradients used from input.gacode
+
+ Scenario control
+
+ TGYRO_EXPWD_FLAG               : Turbulent exchange OFF
+ LOC_SCENARIO                   : Experimental, dynamic exchange
+ TGYRO_NEO_METHOD               : (2) NEO code
+ TGYRO_TGLF_REVISION            : in development
+
+ Profile evolution settings
+
+ LOC_TI_FEEDBACK_FLAG           : Ti evolution ON
+ LOC_TE_FEEDBACK_FLAG           : Te evolution ON
+ LOC_ER_FEEDBACK_FLAG           : Er evolution OFF
+ TGYRO_DEN_METHOD0              : ne profile fixed
+ TGYRO_DEN_METHOD1              : ni1 profile fixed
+
+ Physics parameters
+
+ LOC_RMIN                       :   0.2279
+ LOC_RMAX                       :   0.8507
+ LOC_NU_SCALE                   :   1.0000
+ LOC_BETAE_SCALE                :   1.0000
+ -> Fluctuations                : Electromagnetic
+ -> Pressure                    : Using pressure (beta) computed by summing over included species.
+ LOC_ZEFF_FLAG                  : Z_eff from data
+ LOC_LOCK_PROFILE_FLAG          : Initial profiles from gradients
+ LOC_EVOLVE_GRAD_ONLY_FLAG      : Self-consistently evolve profiles with gradients
+
+ Pedestal parameters
+
+ TGYRO_PED_MODEL                : No pedestal.  Use fixed pivot.
+
+ Ion parameters
+
+ ion 1 [mass,charge,type]       : D      2.00   1.00   thermal             
+
+ INFO: (tgyro)                  : GyroBohm factors defined by ion 1 mass.
+
+
+ Rotation and field orientation
+
+ TGYRO_ROTATION_FLAG            : Rotation effects ON
+ IPCCW                          :    1
+ BTCCW                          :   -1
+
+ Rescaling factors
+
+ TGYRO_INPUT_DEN_SCALE          :   1.0000
+ TGYRO_INPUT_TE_SCALE           :   1.0000
+ TGYRO_INPUT_TI_SCALE           :   1.0000
+ TGYRO_INPUT_W0_SCALE           :   1.0000
+ TGYRO_INPUT_PAUX_SCALE         :   1.0000
+ TGYRO_INPUT_FUSION_SCALE       :   1.0000
+ -----------------------------------------------------------------
+ INFO: (tgyro_iteration_driver) Survived initialization, starting iterations
+ INFO: clean exit from TGYRO                                                     

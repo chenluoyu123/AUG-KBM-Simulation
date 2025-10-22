@@ -1,0 +1,19 @@
+# plot the q and kinetic profiles
+figure(figsize=[8,8])
+lw=3
+fs2=24
+inputgacode=OMFIT['INPUTS']['input.gacode']
+plot(inputgacode['rho'],inputgacode['Ti_1'],'-b',linewidth=lw,label='$T_i(keV)$')
+plot(inputgacode['rho'],inputgacode['Te'],'--b',linewidth=lw,label='$T_e(keV)$')
+plot(inputgacode['rho'],inputgacode['ne'],'-k',linewidth=lw,label='$n_e(10^{19}m^{-3})$')
+plot(inputgacode['rho'],-1*inputgacode['q'],'-r',linewidth=lw,label='q')
+plot(array([0,1]),array([1,1]),'--r',linewidth=lw/2)
+xlabel('$\\rho$',fontsize=fs2)
+text(0.35,6,'$n_e(10^{19}m^{-3})$',color='k',fontsize=fs2)
+text(0.05,4,'$T_e(keV)$',color='b',fontsize=fs2)
+text(0.30,4.5,'$T_i(keV)$',color='b',fontsize=fs2)
+text(0.2,1.5,'q',color='r',fontsize=fs2)
+xlim([0,1.0])
+ylim([0,9])
+xticks(linspace(0,0.9,4),fontsize=fs2)
+yticks(array([1,3,6,9]),fontsize=fs2)

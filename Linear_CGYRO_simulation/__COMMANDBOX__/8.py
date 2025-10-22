@@ -1,0 +1,1 @@
+    OMFIT.saveas('/scratch/xiangjian/OMFITdata/project/cgyro/AUG_cgyro_rho0.35_nfscan_2ion_refine.zip')

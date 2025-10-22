@@ -1,0 +1,60 @@
+  == Non-Distributed ==
+
+ Pointers
+
+    0.002 MB   ie_v
+    0.002 MB   ix_v
+    0.002 MB   is_v
+    0.001 MB   ir_c
+    0.001 MB   it_c
+    0.001 MB   ic_c
+    0.002 MB   iv_v
+    0.005 MB   icd_c
+    0.022 MB   dtheta             (   7, 192,   1) complex 
+    0.022 MB   dtheta_up          (   7, 192,   1) complex 
+
+ Fields and field solve
+
+    0.009 MB   field              (   3, 192,   1) complex 
+    0.009 MB   field_dot          (   3, 192,   1) complex 
+    0.009 MB   field_loc          (   3, 192,   1) complex 
+    0.009 MB   field_old          (   3, 192,   1) complex 
+    0.009 MB   field_old2         (   3, 192,   1) complex 
+    0.009 MB   field_old3         (   3, 192,   1) complex 
+    0.005 MB   fcoef              (   3, 192,   1) real    
+    0.008 MB   gcoef              (   5, 192,   1) real    
+
+ TOTAL
+    0.124 MB [persistent memory per MPI process]
+
+  == Distributed ==
+
+ Distribution-like arrays
+
+    0.295 MB   h0_old             ( 192,  96,   1) complex 
+    1.769 MB   rhs                ( 192,  96,   1,   6) complex 
+    0.885 MB   omega_s            (   3, 192,  96,   1) complex 
+    0.885 MB   omega_ss           (   3, 192,  96,   1) complex 
+    0.295 MB   omega_cap_h        ( 192,  96,   1) complex 
+    0.295 MB   omega_h            ( 192,  96,   1) complex 
+    0.295 MB   h_x                ( 192,  96,   1) complex 
+    0.295 MB   h0_x               ( 192,  96,   1) complex 
+    0.295 MB   g_x                ( 192,  96,   1) complex 
+    0.295 MB   cap_h_c            ( 192,  96,   1) complex 
+    0.295 MB   cap_h_ct           ( 192,  96,   1) complex 
+    0.295 MB   cap_h_c_dot        ( 192,  96,   1) complex 
+    0.295 MB   cap_h_c_old        ( 192,  96,   1) complex 
+    0.295 MB   cap_h_c_old2       ( 192,  96,   1) complex 
+    0.295 MB   cap_h_v            (  48, 384,   1) complex 
+    0.442 MB   jvec_c             (   3, 192,  96,   1) real    
+    0.442 MB   jvec_v             (   3,  48, 384,   1) real    
+    0.442 MB   jxvec_c            (   3, 192,  96,   1) real    
+    0.147 MB   upfac1             ( 192,  96,   1) real    
+    0.147 MB   upfac2             ( 192,  96,   1) real    
+
+ Collision operator
+
+   56.623 MB   cmat               ( 384, 384,  48,   1) real    
+
+ TOTAL
+    0.065 GB [per MPI process]

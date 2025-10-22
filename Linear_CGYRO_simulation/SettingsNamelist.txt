@@ -1,0 +1,140 @@
+ &PHYSICS
+ restart_mode = 0
+ time_scheme = 1.0 0.01 500.0
+ case_tag = 'lincgyro'
+ mnp = 3 4 0
+ kyarr = 0.03 0.06 0.09 0.12000000000000001 0.15000000000000002 
+ 0.18000000000000002 0.21000000000000002 0.24000000000000002 0.27 0.3 0.4 
+ 0.5333333333333333 0.6666666666666667 0.8
+  &1d
+  Range = 0.000142615 0.042784499999999996 0.09983049999999999 0.142615
+  Para = 'DENS_2'
+   &gyroeigen
+   ieigensolver = 0
+   iholland = 1
+   wr_guess = 3*1
+   wi_guess = 3*0.1
+   /
+  /
+  &2d
+  Para_x = 'Q'
+  Para_y = 'S'
+  Range_x = 2 4 6
+  Range_y = 0.4 0.8
+  /
+ mode = 'lin'
+ /
+ &SETUP
+ icgyro = 1
+ ieigen = 0
+ server = 'shenma'
+ workDir =
+ executable = 'cgyro -e . -n 4'
+ num_nodes = 1
+ num_cores = 24
+ wall_time = '96:00:00'
+ pbs_queue = 'parallel01'
+ iloadmthd = 0
+ idimrun = 1
+ effnum = 5
+ irun = 1
+ idownsync = 1
+ /
+ &PLOTS
+ idimplt = 0
+ iwritelin = 0
+ iwriteflux = 0
+ iflwphy = 1
+ ilogx = 0
+ ilogy = 0
+ Range_xscale = 1
+ Range_yscale = 1
+ Range_scale = 1
+ unit_flag = 0
+ kyarr = 0.03 0.06 0.09 0.12000000000000001 0.15000000000000002 
+ 0.18000000000000002 0.21000000000000002 0.24000000000000002 0.27 0.3 0.4 
+ 0.5333333333333333 0.6666666666666667 0.8
+ ky_eigen = 0.03 0.06 0.09 0.12000000000000001 0.15000000000000002 
+ 0.18000000000000002 0.21000000000000002 0.24000000000000002 0.27 0.3 0.4 
+ 0.5333333333333333 0.6666666666666667 0.8
+ ibelow0 = 1.0 -0.01
+ ilim_err = 0.0 0.001
+ csda = 0.0 200000.0
+  &1d
+  Para = 'DENS_2'
+  Range = 0.000142615 0.042784499999999996 0.09983049999999999 0.142615
+  powky = 0
+  para_eigen = 0.000142615 0.042784499999999996 0.09983049999999999 0.142615
+  ind_kyfit =
+  ifit_mthd = 2
+  ipltExB = 1
+  /
+  &2d
+  Para_x = 'Q'
+  Para_y = 'S'
+  Para_x_display = 'SAFETY_FACTOR'
+  Para_y_display = 'S'
+  para_x_eigen = 2 4 6
+  para_y_eigen = 0.4 0.8
+  Range_x = 2 4 6
+  Range_y = 0.4 0.8
+  x_scale = 1
+  y_scale = 1
+  ipltexp = 0
+  /
+  &nl
+   &case_load
+   nr240 = '/global/project/projectdirs/atom/users/xiang/diiid-176125/jeff/xiang2/ErCase/nfield3/lowerky/fixnegshear/retry/nky24/nr240'
+   nr120 = '/global/project/projectdirs/atom/users/xiang/diiid-176125/jeff/xiang2/ErCase/nfield3/lowerky/fixnegshear/retry/nky24'
+   /
+   &freq_lin
+   ky = 0.05 0.1 0.15 0.2
+   omega = 4*1
+   gamma = 4*1
+   Qi_ql_han = 4*1
+   /
+  case_plot = 'nr240' 'nr120'
+  channel = 'Q_1' 'Gamma_1'
+  i_field = 1
+  t_ave = 0.4
+  t_end = 1.0
+  t_trace = 100 200 600
+  case_t_trace = ''
+  /
+ Para_label = 'DENS_2'
+ /
+ &nl_diag
+ case = 'aLTi2.2ES'
+ i_theta_plot = 3
+ i_n = 3
+ i_field = 1
+ i_radial = 60
+ t_ave = 0.4
+ /
+ &EXPERIMENT
+ shot =
+ time =
+ device =
+ shots =
+ times =
+ runid =
+ /
+ &REMOTE_SETUP
+ serverPicker = 'login112'
+ workDir = '/scratch/xiangjian/OMFIT/runs/CGYRO_Scan/10'
+ server = 'xiangjian@login112'
+ tunnel = ''
+ /
+ &MODULE
+ ID = 'CGYRO_SCAN'
+ edited_by = 'xiangjian'
+ date = '03 Jul 2016  15:34'
+ version = ''
+ contact = '' 'xjian@ipp.ac.cn'
+ /
+ &DEPENDENCIES
+ linout = '/home/task1/xiangjian/pro2txt/tmp.txt'
+ fluxout = '/home/task1/xiangjian/pro2txt/tmp.txt'
+ workdirkuafu = '/scratch/xiangjian/OMFIT/runs/CGYRO_Scan/'
+ workdiriris = '/cluster-scratch/jianx/OMFIT/runs/CGYRO_Scan/'
+ /

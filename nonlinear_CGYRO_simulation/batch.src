@@ -1,0 +1,24 @@
+#!/bin/bash 
+#SBATCH -J box1
+#SBATCH -o /public/home/jianx/workspace/AUG/ion2/nl/nn32/s0.1/nr256/box1/batch.out
+#SBATCH -e /public/home/jianx/workspace/AUG/ion2/nl/nn32/s0.1/nr256/box1/batch.err
+#SBATCH -p hfacnormal01
+#SBATCH -t 12:00:00
+#SBATCH -N 8
+#SBATCH -n 1024
+#SBATCH -c 1
+export SLURM_CPU_BIND="cores"
+#SBATCH --comment=WRF
+export jlchen_gacode_third_party_root=/public/home/jianx/mycode/third_party
+module purge
+module use /public/home/jianx/mycode/third_party/modulefiles 
+module load  compiler/devtoolset/7.3.1   openmpi-MINGYUE
+module load zlib-jlchen
+#module load openmpi-jlchen 
+module load hdf5-jlchen 
+module load netcdf-jlchen 
+module load fftw-jlchen 
+export GACODE_PLATFORM=MINGYUE # set this for compile
+export GACODE_ROOT=/public/home/jianx/mycode/gacode_2021_gfortran
+. /public/home/jianx/mycode/gacode_2021_gfortran/shared/bin/gacode_setup
+cgyro -e box1 -n 1024 -nomp 1 -numa 8 -mpinuma 16 -p /public/home/jianx/workspace/AUG/ion2/nl/nn32/s0.1/nr256
